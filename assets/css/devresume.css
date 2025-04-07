@@ -9104,3 +9104,12 @@ a.resume-link:hover {
 		border-left: 0;
 	}
 }
+
+.potfolio-item {
+	overflow: hidden;
+	position: relative;
+}
+.potfolio-item .potfolio-item-inner {
+	overflow: hidden;
+	position: relative;
+}
