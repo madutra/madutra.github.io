@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Currículo Matheus Andrade</title>
+		<title data-translate="title">Currículo Matheus Andrade</title>
 
 		<!-- Meta -->
 		<meta charset="utf-8" />
@@ -23,6 +23,25 @@
 		<!-- Theme CSS -->
 		<link id="theme-style" rel="stylesheet" href="assets/css/devresume.css" />
 		<script>
+			function toggleLanguage() {
+				const button = document.getElementById("language-btn");
+				const currentLanguage = button.textContent.trim();
+				if (currentLanguage === "English") {
+					button.textContent = "Português";
+
+					document.querySelectorAll("[data-translate]").forEach((element) => {
+						const key = element.getAttribute("data-translate");
+						element.textContent = translations.pt[key] || element.textContent;
+					});
+				} else {
+					button.textContent = "English";
+					document.querySelectorAll("[data-translate]").forEach((element) => {
+						const key = element.getAttribute("data-translate");
+						element.textContent = translations.en[key] || element.textContent;
+					});
+				}
+			}
+
 			const translations = {
 				en: {
 					title: "Curriculum Matheus Andrade",
@@ -48,72 +67,6 @@
 					teamSports: "Team Sports",
 					travel: "Travel",
 					hangOut: "Hanging out with friends",
-					experiences: [
-						{
-							title: "Fullstack Developer",
-							company: "Pivot Agricultural Machines and Irrigation Systems",
-							date: "September/2023",
-							description:
-								"Developer focused on software maintenance, team code review, implementation, and improvement of software using TypeScript, ReactJS for the frontend, and PHP Laravel for the backend. The system serves as middleware for SAP and Salesforce, enabling the creation of service orders, sales, purchases, and more for internal users. Database: MySQL.",
-							technologies: [
-								"Laravel",
-								"PHP",
-								"MySQL",
-								"CSS",
-								"HTML5",
-								"React.js",
-								"GitHub",
-							],
-						},
-						{
-							title: "Fullstack Developer",
-							company: "Dropix Films",
-							date: "October/2023 - December/2024",
-							description:
-								"Project developed for Dropix Films, a company focused on communication and audiovisual, aiming to demonstrate the company's personality and culture through a fluid, beautiful, and well-organized website. With access for clients and administration, an application was created using Next.js for the frontend and Nest.js for the backend, performing all CRUD operations for projects and client records. Project URL: www.dropixfilms.com",
-							technologies: [
-								"Next.js",
-								"NestJS",
-								"React.js",
-								"TypeScript",
-								"MySQL",
-								"GitHub",
-							],
-						},
-						{
-							title: "Fullstack Developer",
-							company: "Senior Sistemas",
-							date: "February/2021 - September/2023",
-							description:
-								"Designed, developed, implemented, and maintained information systems and applications, ergonomic navigation criteria, and program coding, aiming to meet established objectives regarding quality and benefits, as well as rationalizing and/or automating work processes and routines for all departments of the institution. Used languages such as .Net, VB6, and C# for system maintenance.",
-							technologies: [
-								"C#",
-								"VB6",
-								"ASP.NET",
-								"SQL Server",
-								"DevOps",
-								"CSS",
-								"HTML5",
-							],
-						},
-						{
-							title: "Fullstack Developer",
-							company: "ESP Benefícios",
-							date: "October/2020 - January/2021",
-							description:
-								"ESP is a flexible benefits manager that administers and improves the entire process of offering benefits from companies to their employees in a 100% digital way. I was one of the developers of the application.",
-							functionalities: [
-								"Management and control of benefits offered to employees through plans divided into categories.",
-								"Practicality for employees to view balance, expenses with benefits, credits, or debits.",
-								"Allows employees to send receipts to prove that the benefit is being used in the correct category.",
-								"Allows employees to view receipts sent for approval.",
-								"Allows employees to request an advance on the benefit if necessary.",
-								"In the management panel (web system), the company owner can approve or reject a receipt, authorizing or not the employee's reimbursement.",
-								"In the management panel (web system), the company owner can change the company's or employee's plans.",
-							],
-							technologies: ["React Native", "Node.js", "MySQL", "CSS", "HTML5"],
-						},
-					],
 				},
 				pt: {
 					title: "Currículo Matheus Andrade",
@@ -139,72 +92,6 @@
 					teamSports: "Esportes em Grupo",
 					travel: "Viajar",
 					hangOut: "Sair com os amigos",
-					experiences: [
-						{
-							title: "Desenvolvedor Fullstack",
-							company: "Pivot Máquinas Agrícolas e Sistemas de Irrigação",
-							date: "Setembro/2023",
-							description:
-								"Desenvolvedor com foco em manutenção de software, revisão de código de equipe, implementação e melhoria do software em TypeScript, ReactJS para o frontend e PHP Laravel para o backend. O sistema serve como middleware para SAP e Salesforce, permitindo a criação de ordens de serviço, vendas, compras e mais para usuários internos. Banco de dados: MySQL.",
-							technologies: [
-								"Laravel",
-								"PHP",
-								"MySQL",
-								"CSS",
-								"HTML5",
-								"React.js",
-								"GitHub",
-							],
-						},
-						{
-							title: "Desenvolvedor Fullstack",
-							company: "Dropix Films",
-							date: "Outubro/2023 - Dezembro/2024",
-							description:
-								"Projeto desenvolvido para a Dropix Films, uma empresa focada em comunicação e audiovisual, com o objetivo de demonstrar a personalidade e cultura da empresa por meio de um site fluido, bonito e bem organizado. Com acesso para clientes e administração, foi criada uma aplicação usando Next.js para o frontend e Nest.js para o backend, realizando todas as operações CRUD de projetos e registros de clientes. URL do projeto: www.dropixfilms.com",
-							technologies: [
-								"Next.js",
-								"NestJS",
-								"React.js",
-								"TypeScript",
-								"MySQL",
-								"GitHub",
-							],
-						},
-						{
-							title: "Desenvolvedor Fullstack",
-							company: "Senior Sistemas",
-							date: "Fevereiro/2021 - Setembro/2023",
-							description:
-								"Projetei, desenvolvi, implementei e mantive sistemas de informação e aplicações, critérios ergonômicos de navegação e codificação de programas, visando atender aos objetivos estabelecidos quanto à qualidade e benefícios, bem como racionalizar e/ou automatizar processos e rotinas de trabalho de todos os departamentos da instituição. Utilizávamos linguagens como .Net, VB6 e C# para manutenção do sistema.",
-							technologies: [
-								"C#",
-								"VB6",
-								"ASP.NET",
-								"SQL Server",
-								"DevOps",
-								"CSS",
-								"HTML5",
-							],
-						},
-						{
-							title: "Desenvolvedor Fullstack",
-							company: "ESP Benefícios",
-							date: "Outubro/2020 - Janeiro/2021",
-							description:
-								"A ESP é uma gestora de benefícios flexíveis que administra e aprimora todo o processo de oferta de benefícios das empresas para seus colaboradores de forma 100% digital. Fui um dos desenvolvedores do aplicativo.",
-							functionalities: [
-								"Gestão e controle dos benefícios ofertados ao colaborador, por meio de planos divididos em categorias.",
-								"Praticidade para o colaborador visualizar saldo, gastos com os benefícios, créditos ou débitos.",
-								"Permite ao colaborador enviar os recibos para comprovar que o benefício está sendo utilizado na categoria correta.",
-								"Permite ao colaborador visualizar os recibos enviados para aprovação.",
-								"Permite ao colaborador solicitar um adiantamento do benefício caso seja necessário.",
-								"No painel de gestão (sistema web), o dono da empresa pode aprovar ou reprovar um recibo, autorizando ou não o reembolso do colaborador.",
-								"No painel de gestão (sistema web), o dono da empresa pode alterar os planos da empresa ou do colaborador.",
-							],
-							technologies: ["React Native", "Node.js", "MySQL", "CSS", "HTML5"],
-						},
-					],
 				},
 			};
 		</script>
@@ -230,7 +117,9 @@
 									alt="image"
 								/>
 								<div class="d-flex flex-column justify-content-center">
-									<h3 class="resume-name mb-0 text-uppercase">Matheus Dutra</h3>
+									<h3 class="resume-name mb-0 text-uppercase" data-translate="title">
+										Matheus Dutra
+									</h3>
 									<div class="resume-tagline mb-3 mb-md-0">Engenheiro de Software</div>
 								</div>
 							</div>
@@ -242,12 +131,16 @@
 										><a
 											class="resume-link"
 											href="https://api.whatsapp.com/send?phone=5562982287372&text=Ol%C3%A1%2C%20Matheus%2C%20vim%20pelo%20curr%C3%ADculo!"
+											data-translate="phone"
 											>(62) 98228-7372</a
 										>
 									</li>
 									<li class="mb-2">
 										<i class="fas fa-envelope-square fa-fw fa-lg mr-2"></i
-										><a class="resume-link" href="mailto:matheus.addutra@gmail.com"
+										><a
+											class="resume-link"
+											href="mailto:matheus.addutra@gmail.com"
+											data-translate="email"
 											>matheus.addutra@gmail.com</a
 										>
 									</li>
@@ -256,23 +149,32 @@
 										><a
 											class="resume-link"
 											href="https://www.linkedin.com/in/matheus-andrade-dutra/"
+											data-translate="linkedin"
 											>Perfil linkedin
 										</a>
 									</li>
 									<li class="mb-2">
 										<i class="fab fa-github-square fa-fw fa-lg mr-2"></i
-										><a class="resume-link" href="https://github.com/madutra"
+										><a
+											class="resume-link"
+											href="https://github.com/madutra"
+											data-translate="github"
 											>https://github.com/madutra</a
 										>
 									</li>
 									<li class="mb-2">
 										<i class="fas fa-file-contract fa-fw fa-lg mr-2"></i>
-										<a class="resume-link" href="assets/images/curriculo.pdf" download
+										<a
+											class="resume-link"
+											href="assets/images/curriculo.pdf"
+											download
+											data-translate="downloadResume"
 											>Baixar Currículo</a
 										>
 									</li>
 									<li class="mb-0">
-										<i class="fas fa-map-marker-alt fa-fw fa-lg mr-2"></i>Goiânia
+										<i class="fas fa-map-marker-alt fa-fw fa-lg mr-2"></i
+										><span data-translate="location">Goiânia</span>
 									</li>
 								</ul>
 							</div>
@@ -285,7 +187,7 @@
 					<div class="resume-intro py-3">
 						<div class="media flex-column flex-md-row align-items-center">
 							<div class="media-body text-left">
-								<p class="mb-0">
+								<p class="mb-0" data-translate="intro">
 									Sou Desenvolvedor Full Stack com mais de 5 anos de experiência,
 									especializado em React.js, Next.js, Node.js, NestJS e PHP, com forte
 									atuação no desenvolvimento de aplicações web e mobile. Tenho uma
@@ -317,7 +219,10 @@
 						<div class="row">
 							<div class="resume-main col-12 col-lg-8 col-xl-9 pr-0 pr-lg-5">
 								<section class="work-section py-3">
-									<h3 class="text-uppercase resume-section-heading mb-4">
+									<h3
+										class="text-uppercase resume-section-heading mb-4"
+										data-translate="professionalExperience"
+									>
 										Experiências Profissional
 									</h3>
 									<div class="item mb-3">
@@ -516,7 +421,12 @@
 								<!--//project-section-->
 
 								<section class="portfolio-section py-3">
-									<h3 class="text-uppercase resume-section-heading mb-4">Portfólio</h3>
+									<h3
+										class="text-uppercase resume-section-heading mb-4"
+										data-translate="portfolio"
+									>
+										Portfólio
+									</h3>
 									<div class="row">
 										<div class="col-12 col-md-6 col-lg-4 mb-4">
 											<div class="portfolio-item">
@@ -589,9 +499,14 @@
 							<!--//resume-main-->
 							<aside class="resume-aside col-12 col-lg-4 col-xl-3 px-lg-4 pb-lg-4">
 								<section class="skills-section py-3">
-									<h3 class="text-uppercase resume-section-heading mb-4">Habilidades</h3>
+									<h3
+										class="text-uppercase resume-section-heading mb-4"
+										data-translate="skills"
+									>
+										Habilidades
+									</h3>
 									<div class="item">
-										<h4 class="item-title">Tecnologias</h4>
+										<h4 class="item-title" data-translate="technologies">Tecnologias</h4>
 										<ul class="list-unstyled resume-skills-list">
 											<li class="mb-2">JavaScript/React</li>
 											<li class="mb-2">Node.js</li>
@@ -604,7 +519,7 @@
 									</div>
 									<!--//item-->
 									<div class="item">
-										<h4 class="item-title">Profissional</h4>
+										<h4 class="item-title" data-translate="professional">Profissional</h4>
 										<ul class="list-unstyled resume-skills-list">
 											<li class="mb-2">Comunicação Efetiva</li>
 											<li class="mb-2">Trabalho em equipe</li>
@@ -616,7 +531,12 @@
 								</section>
 								<!--//skills-section-->
 								<section class="education-section py-3">
-									<h3 class="text-uppercase resume-section-heading mb-4">Acadêmico</h3>
+									<h3
+										class="text-uppercase resume-section-heading mb-4"
+										data-translate="education"
+									>
+										Acadêmico
+									</h3>
 									<ul class="list-unstyled resume-education-list">
 										<li>
 											<div class="resume-degree font-weight-bold">
@@ -641,22 +561,36 @@
 								</section>
 								<!--//education-section-->
 								<section class="skills-section py-3">
-									<h3 class="text-uppercase resume-section-heading mb-4">Idiomas</h3>
+									<h3
+										class="text-uppercase resume-section-heading mb-4"
+										data-translate="languages"
+									>
+										Idiomas
+									</h3>
 									<ul class="list-unstyled resume-lang-list">
 										<li class="mb-2">
-											Português <span class="text-muted">(Nativo)</span>
+											Português
+											<span class="text-muted" data-translate="portuguese">(Nativo)</span>
 										</li>
-										<li>Inglês <span class="text-muted">(Avançado)</span></li>
+										<li>
+											Inglês
+											<span class="text-muted" data-translate="english">(Avançado)</span>
+										</li>
 									</ul>
 								</section>
 								<!--//certificates-section-->
 								<section class="skills-section py-3">
-									<h3 class="text-uppercase resume-section-heading mb-4">Hobbies</h3>
+									<h3
+										class="text-uppercase resume-section-heading mb-4"
+										data-translate="hobbies"
+									>
+										Hobbies
+									</h3>
 									<ul class="list-unstyled resume-interests-list mb-0">
-										<li class="mb-2">Games</li>
-										<li class="mb-2">Esportes em Grupo</li>
-										<li class="mb-2">Viajar</li>
-										<li>Sair com os amigos</li>
+										<li class="mb-2" data-translate="games">Games</li>
+										<li class="mb-2" data-translate="teamSports">Esportes em Grupo</li>
+										<li class="mb-2" data-translate="travel">Viajar</li>
+										<li data-translate="hangOut">Sair com os amigos</li>
 									</ul>
 								</section>
 								<!--//certificates-section-->
@@ -672,14 +606,14 @@
 							class="resume-social-list list-inline mx-auto mb-0 d-inline-block text-muted"
 						>
 							<!-- <li class="list-inline-item mb-lg-0 mr-3">
-							<a class="resume-link" href="#"><i class="fab fa-github-square fa-2x mr-2"
-									data-fa-transform="down-4"></i><span
-									class="d-none d-lg-inline-block text-muted">github.com/username</span></a>
-						</li>
-						<li class="list-inline-item mb-lg-0 mr-3">
-							<a class="resume-link" href="#"><i class="fab fa-linkedin fa-2x mr-2" data-fa-transform="down-4"></i><span
-									class="d-none d-lg-inline-block text-muted">linkedin.com/in/username</span></a>
-						</li> -->
+								<a class="resume-link" href="#"><i class="fab fa-github-square fa-2x mr-2"
+										data-fa-transform="down-4"></i><span
+										class="d-none d-lg-inline-block text-muted">github.com/username</span></a>
+							</li>
+							<li class="list-inline-item mb-lg-0 mr-3">
+								<a class="resume-link" href="#"><i class="fab fa-linkedin fa-2x mr-2" data-fa-transform="down-4"></i><span
+										class="d-none d-lg-inline-block text-muted">linkedin.com/in/username</span></a>
+							</li> -->
 						</ul>
 					</div>
 					<!--//resume-footer-->
