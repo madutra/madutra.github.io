@@ -22,9 +22,70 @@
 
 		<!-- Theme CSS -->
 		<link id="theme-style" rel="stylesheet" href="assets/css/devresume.css" />
+		<script>
+			const translations = {
+				en: {
+					title: "Curriculum Matheus Andrade",
+					phone: "(62) 98228-7372",
+					email: "matheus.addutra@gmail.com",
+					linkedin: "LinkedIn Profile",
+					github: "https://github.com/madutra",
+					downloadResume: "Download Resume",
+					location: "Goiânia",
+					intro:
+						"I am a Fullstack developer graduated from the Federal University of Goiás (UFG) in 2024, with solid experience in full stack development...",
+					// Add more translations as needed
+				},
+				pt: {
+					title: "Currículo Matheus Andrade",
+					phone: "(62) 98228-7372",
+					email: "matheus.addutra@gmail.com",
+					linkedin: "Perfil linkedin",
+					github: "https://github.com/madutra",
+					downloadResume: "Baixar Currículo",
+					location: "Goiânia",
+					intro:
+						"Sou um desenvolvedor Fullstack formado pela Universidade Federal de Goiás (UFG) em 2024, com sólida experiência em desenvolvimento full stack...",
+					// Add more translations as needed
+				},
+			};
+
+			let currentLanguage = "pt";
+
+			function toggleLanguage() {
+				currentLanguage = currentLanguage === "pt" ? "en" : "pt";
+				const lang = translations[currentLanguage];
+
+				document.title = lang.title;
+				document.querySelector(".resume-name").textContent = "Matheus Dutra";
+				document.querySelector(".resume-tagline").textContent =
+					currentLanguage === "pt" ? "Engenheiro de Software" : "Software Engineer";
+				document.querySelector(".resume-contact a[href*='whatsapp']").textContent =
+					lang.phone;
+				document.querySelector(".resume-contact a[href*='mailto']").textContent =
+					lang.email;
+				document.querySelector(".resume-contact a[href*='linkedin']").textContent =
+					lang.linkedin;
+				document.querySelector(".resume-contact a[href*='github']").textContent =
+					lang.github;
+				document.querySelector(
+					".resume-contact a[href*='curriculo.pdf']"
+				).textContent = lang.downloadResume;
+				document.querySelector(
+					".resume-contact .fa-map-marker-alt"
+				).nextSibling.textContent = lang.location;
+				document.querySelector(".resume-intro p").textContent = lang.intro;
+
+				document.getElementById("language-btn").textContent =
+					currentLanguage === "pt" ? "English" : "Português";
+			}
+		</script>
 	</head>
 
 	<body>
+		<div class="language-toggle" style="text-align: right; padding: 10px">
+			<button id="language-btn" onclick="toggleLanguage()">English</button>
+		</div>
 		<div class="main-wrapper">
 			<div class="container px-3 px-lg-5">
 				<article
