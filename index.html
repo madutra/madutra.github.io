@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title data-translate="title">Currículo Matheus Andrade</title>
+		<title>Currículo Matheus Andrade</title>
 
 		<!-- Meta -->
 		<meta charset="utf-8" />
@@ -22,85 +22,9 @@
 
 		<!-- Theme CSS -->
 		<link id="theme-style" rel="stylesheet" href="assets/css/devresume.css" />
-		<script>
-			function toggleLanguage() {
-				const button = document.getElementById("language-btn");
-				const currentLanguage = button.textContent.trim();
-				if (currentLanguage === "English") {
-					button.textContent = "Português";
-
-					document.querySelectorAll("[data-translate]").forEach((element) => {
-						const key = element.getAttribute("data-translate");
-						element.textContent = translations.pt[key] || element.textContent;
-					});
-				} else {
-					button.textContent = "English";
-					document.querySelectorAll("[data-translate]").forEach((element) => {
-						const key = element.getAttribute("data-translate");
-						element.textContent = translations.en[key] || element.textContent;
-					});
-				}
-			}
-
-			const translations = {
-				en: {
-					title: "Curriculum Matheus Andrade",
-					phone: "(62) 98228-7372",
-					email: "matheus.addutra@gmail.com",
-					linkedin: "LinkedIn Profile",
-					github: "https://github.com/madutra",
-					downloadResume: "Download Resume",
-					location: "Goiânia",
-					intro:
-						"I am a Fullstack developer graduated from the Federal University of Goiás (UFG) in 2024, with solid experience in full stack development. Currently, I work as a developer, combining knowledge in backend and frontend technologies to create efficient and scalable solutions. During my journey, I worked while pursuing my degree, which provided me with a practical and in-depth view of the technology market. My focus is on developing robust, optimized, and secure applications, always seeking to improve my skills and keep up with industry best practices.",
-					professionalExperience: "Professional Experience",
-					portfolio: "Portfolio",
-					skills: "Skills",
-					technologies: "Technologies",
-					professional: "Professional",
-					education: "Education",
-					languages: "Languages",
-					hobbies: "Hobbies",
-					portuguese: "Portuguese (Native)",
-					english: "English (Advanced)",
-					games: "Games",
-					teamSports: "Team Sports",
-					travel: "Travel",
-					hangOut: "Hanging out with friends",
-				},
-				pt: {
-					title: "Currículo Matheus Andrade",
-					phone: "(62) 98228-7372",
-					email: "matheus.addutra@gmail.com",
-					linkedin: "Perfil linkedin",
-					github: "https://github.com/madutra",
-					downloadResume: "Baixar Currículo",
-					location: "Goiânia",
-					intro:
-						"Sou um desenvolvedor Fullstack formado pela Universidade Federal de Goiás (UFG) em 2024, com sólida experiência em desenvolvimento full stack. Atualmente, atuo como desenvolvedor, combinando conhecimento em tecnologias backend e frontend para criar soluções eficientes e escaláveis. Durante minha trajetória, trabalhei enquanto cursava a graduação, o que me proporcionou uma visão prática e aprofundada do mercado de tecnologia. Meu foco está em desenvolver aplicações robustas, otimizadas e seguras, sempre buscando aprimorar minhas habilidades e acompanhar as melhores práticas da indústria.",
-					professionalExperience: "Experiências Profissional",
-					portfolio: "Portfólio",
-					skills: "Habilidades",
-					technologies: "Tecnologias",
-					professional: "Profissional",
-					education: "Acadêmico",
-					languages: "Idiomas",
-					hobbies: "Hobbies",
-					portuguese: "Português (Nativo)",
-					english: "Inglês (Avançado)",
-					games: "Games",
-					teamSports: "Esportes em Grupo",
-					travel: "Viajar",
-					hangOut: "Sair com os amigos",
-				},
-			};
-		</script>
 	</head>
 
 	<body>
-		<div class="language-toggle" style="text-align: right; padding: 10px">
-			<button id="language-btn" onclick="toggleLanguage()">English</button>
-		</div>
 		<div class="main-wrapper">
 			<div class="container px-3 px-lg-5">
 				<article
@@ -117,10 +41,8 @@
 									alt="image"
 								/>
 								<div class="d-flex flex-column justify-content-center">
-									<h3 class="resume-name mb-0 text-uppercase" data-translate="title">
-										Matheus Dutra
-									</h3>
-									<div class="resume-tagline mb-3 mb-md-0">Engenheiro de Software</div>
+									<h3 class="resume-name mb-0 text-uppercase">Matheus Dutra</h3>
+									<div class="resume-tagline mb-3 mb-md-0">Software Engineer</div>
 								</div>
 							</div>
 							<!--//resume-title-->
@@ -131,16 +53,12 @@
 										><a
 											class="resume-link"
 											href="https://api.whatsapp.com/send?phone=5562982287372&text=Ol%C3%A1%2C%20Matheus%2C%20vim%20pelo%20curr%C3%ADculo!"
-											data-translate="phone"
 											>(62) 98228-7372</a
 										>
 									</li>
 									<li class="mb-2">
 										<i class="fas fa-envelope-square fa-fw fa-lg mr-2"></i
-										><a
-											class="resume-link"
-											href="mailto:matheus.addutra@gmail.com"
-											data-translate="email"
+										><a class="resume-link" href="mailto:matheus.addutra@gmail.com"
 											>matheus.addutra@gmail.com</a
 										>
 									</li>
@@ -149,32 +67,23 @@
 										><a
 											class="resume-link"
 											href="https://www.linkedin.com/in/matheus-andrade-dutra/"
-											data-translate="linkedin"
-											>Perfil linkedin
+											>Linkedin Profile
 										</a>
 									</li>
 									<li class="mb-2">
 										<i class="fab fa-github-square fa-fw fa-lg mr-2"></i
-										><a
-											class="resume-link"
-											href="https://github.com/madutra"
-											data-translate="github"
+										><a class="resume-link" href="https://github.com/madutra"
 											>https://github.com/madutra</a
 										>
 									</li>
 									<li class="mb-2">
 										<i class="fas fa-file-contract fa-fw fa-lg mr-2"></i>
-										<a
-											class="resume-link"
-											href="assets/images/curriculo.pdf"
-											download
-											data-translate="downloadResume"
-											>Baixar Currículo</a
+										<a class="resume-link" href="assets/images/curriculo.pdf" download
+											>Download Resume</a
 										>
 									</li>
 									<li class="mb-0">
-										<i class="fas fa-map-marker-alt fa-fw fa-lg mr-2"></i
-										><span data-translate="location">Goiânia</span>
+										<i class="fas fa-map-marker-alt fa-fw fa-lg mr-2"></i>Goiânia
 									</li>
 								</ul>
 							</div>
@@ -187,27 +96,26 @@
 					<div class="resume-intro py-3">
 						<div class="media flex-column flex-md-row align-items-center">
 							<div class="media-body text-left">
-								<p class="mb-0" data-translate="intro">
-									Sou Desenvolvedor Full Stack com mais de 5 anos de experiência,
-									especializado em React.js, Next.js, Node.js, NestJS e PHP, com forte
-									atuação no desenvolvimento de aplicações web e mobile. Tenho uma
-									abordagem analítica e focada na resolução de problemas, sempre
-									comprometido em criar soluções eficientes, escaláveis e alinhadas às
-									necessidades reais do negócio. Com experiência em desenvolvimento de
-									sistemas de ponta a ponta, já atuei em diversas etapas do ciclo de vida
-									do software, incluindo arquitetura, desenvolvimento, testes e deploy.
-									Tenho sólida experiência com bancos de dados SQL e NoSQL, como MySQL e
-									SQL Server, e sou especializado no desenvolvimento de APIs REST e
-									GraphQL, sempre com ênfase em boas práticas como Clean Architecture,
-									SOLID e testes automatizados. Sou apaixonado por tecnologia e inovação,
-									buscando constantemente me atualizar e aprimorar minhas habilidades
-									para oferecer as melhores soluções. Acredito fortemente no trabalho em
-									equipe e na troca de conhecimento, o que contribui para meu crescimento
-									contínuo e para o sucesso dos projetos dos quais participo. Se você
-									procura um Desenvolvedor Full Stack altamente qualificado, com
-									experiência prática em tecnologias modernas e comprometido com a
-									excelência, estou pronto para contribuir para o sucesso do seu projeto.
-									Vamos nos conectar!
+								<p class="mb-0">
+									I'm a Full Stack Developer with over 5 years of experience,
+									specializing in React.js, Next.js, Node.js, NestJS, and PHP, with
+									strong expertise in developing web and mobile applications. I have an
+									analytical and problem-solving approach, always committed to creating
+									efficient, scalable solutions that meet real business needs. With
+									end-to-end system development experience, I've worked across several
+									stages of the software lifecycle, including architecture, development,
+									testing, and deployment. I have solid experience with SQL and NoSQL
+									databases such as MySQL and SQL Server, and I'm specialized in building
+									REST and GraphQL APIs, always emphasizing best practices like Clean
+									Architecture, SOLID principles, and automated testing. I'm passionate
+									about technology and innovation, always striving to stay up to date and
+									improve my skills to deliver the best possible solutions. I strongly
+									believe in teamwork and knowledge sharing, which contributes to my
+									continuous growth and the success of the projects I'm involved in. If
+									you're looking for a highly skilled Full Stack Developer with hands-on
+									experience in modern technologies and a commitment to excellence, I'm
+									ready to contribute to the success of your project. <br />
+									Let's connect!
 								</p>
 							</div>
 							<!--//media-body-->
@@ -219,16 +127,13 @@
 						<div class="row">
 							<div class="resume-main col-12 col-lg-8 col-xl-9 pr-0 pr-lg-5">
 								<section class="work-section py-3">
-									<h3
-										class="text-uppercase resume-section-heading mb-4"
-										data-translate="professionalExperience"
-									>
-										Experiências Profissional
+									<h3 class="text-uppercase resume-section-heading mb-4">
+										Professional Experiences
 									</h3>
 									<div class="item mb-3">
 										<div class="item-heading row align-items-center mb-2">
 											<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">
-												Desenvolvedor Fullstack
+												Fullstack Developer
 											</h4>
 											<div
 												class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right"
@@ -238,17 +143,20 @@
 										</div>
 										<div class="item-content">
 											<p>
-												Desenvolvedor com foco em manutenção de software, revisão de código
-												de equipe, implementação e melhoria do software em Typescript,
-												ReactJs para front-end e PHP Laravel para backend. O sistema Serve
-												como middleware para SAP e SalesForce. Proporcionando criação de
-												ordens de serviço, vendas, compras e entre outros para os usuários
-												internos realizarem. Banco de dados: MySQL.
+												• Developer with experience in software maintenance, team code
+												review, implementation and continuous improvement of systems. He
+												works with Typescript and ReactJs for the development of front-end
+												interfaces and PHP Laravel for the construction of back-end
+												solutions. <br />
+												• I work in the development of middleware that integrates SAP and
+												Salesforce, facilitating the creation and management of internal
+												processes, such as work orders, sales, purchasing and others. Works
+												with MySQL to optimize data storage and retrieval efficiently
 											</p>
 											<ul class="resume-list">
-												<li>Período Integral.</li>
+												<li>Full Period.</li>
 												<li>
-													Tecnologias utilizadas:
+													Techs Used:
 													<div>
 														<p class="resume-list-component">Laravel</p>
 														<p class="resume-list-component">PHP</p>
@@ -265,7 +173,7 @@
 									<div class="item mb-3">
 										<div class="item-heading row align-items-center mb-2">
 											<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">
-												Desenvolvedor Fullstack
+												Fullstack Developer
 											</h4>
 											<div
 												class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right"
@@ -275,14 +183,6 @@
 										</div>
 										<div class="item-content">
 											<p>
-												Projeto desenvolvido para a Empresa DropixFilms, focada em
-												comunicação e audiovisual, com o intuito de demonstrar a
-												personalidade e cultura da empresa através de um site fluído, bonito
-												e bem organizado. Com acesso para clientes e administração, foi
-												criado uma aplicação Next.js para frontend e Nest.js para backend,
-												realizando assim toda a parte de CRUD dos projetos e registros de
-												clientes. URL do projeto: www.dropixfilms.com
-												-----------------------------------------------------------------------------------------------------------------
 												Project developed for the company Dropixfilms, focused on
 												communication and audiovisual, in order to demonstrate the
 												personality and culture of the company through a fluid, beautiful
@@ -292,9 +192,9 @@
 												projects and customer records. Project URL: www.dropixfilms.com
 											</p>
 											<ul class="resume-list">
-												<li>Projeto Pessoal.</li>
+												<li>FreeLance Project.</li>
 												<li>
-													Tecnologias utilizadas:
+													Techs Used:
 													<div>
 														<p class="resume-list-component">Next.js</p>
 														<p class="resume-list-component">NestJS</p>
@@ -310,7 +210,7 @@
 									<div class="item mb-3">
 										<div class="item-heading row align-items-center mb-2">
 											<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">
-												Desenvolvedor Fullstack
+												Fullstack Developer
 											</h4>
 											<div
 												class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right"
@@ -320,18 +220,21 @@
 										</div>
 										<div class="item-content">
 											<p>
-												Projetar, desenvolver, implantar e manter sistemas de informação e
-												aplicações, critérios ergonômicos de navegação, codificação de
-												programas, visando atender aos objetivos estabelecidos quanto a
-												qualidade e benefícios, bem como racionalizar e/ou automatizar
-												processos e rotinas de trabalho de todos os Departamentos da
-												Instituição. Utilizávamos de linguagens como .Net, VB6 e C# para dar
-												manutenção no sistema.
+												• Responsible for designing, developing, deploying and maintaining
+												information systems and applications. <br />
+												• Application of ergonomic navigation criteria, aiming to improve
+												the user experience <br />
+												• To codify programs with a focus on quality and meeting established
+												objectives. <br />
+												• Streamline and automate processes and work routines in various
+												departments of the institution. <br />
+												• Use of languages such as .Net, VB6 and C# for the maintenance and
+												evolution of existing systems. <br />
 											</p>
 											<ul class="resume-list">
-												<li>Período Integral.</li>
+												<li>>Full Period.</li>
 												<li>
-													Tecnologias utilizadas:
+													Techs Used:
 													<div>
 														<p class="resume-list-component">C#</p>
 														<p class="resume-list-component">VB6</p>
@@ -351,7 +254,7 @@
 									<div class="item mb-3">
 										<div class="item-heading row align-items-center mb-2">
 											<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">
-												Desenvolvedor Fullstack
+												Fullstack Developer
 											</h4>
 											<div
 												class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right"
@@ -361,48 +264,17 @@
 										</div>
 										<div class="item-content">
 											<p>
-												A ESP é uma gestora de Benefícios Flexíveis que administra e
-												aprimora todo o processo da oferta de benefícios das empresas para
-												seus colaboradores de maneira 100% digital. Fui um dos integrantes
-												do desenvolvimento do aplicativo. Desenvolvedores: Gabriel Augusto,
-												Matheus Dutra e Lucas Anselmo.
+												• Development of benefits administration software, started in
+												October 2020 and published in February 2021. <br />
+												• Focus on the business public, with the objective of managing
+												employee benefits. <br />
+												• Use of React Native for mobile development and React.Js for the
+												web front-end. <br />
+												• Backend developed with Node.Js to create the API that powers both
+												mobile and the web front-end. <br />
 											</p>
 											<ul class="resume-list">
-												<li>Projeto Pessoal.</li>
-												<li>
-													Funcionalidades:
-													<ul>
-														<li>
-															Gestão e controle dos benefícios ofertados ao colaborador, por
-															meio de planos divididos em categorias.
-														</li>
-														<li>
-															Praticidade para o colaborador visualizar saldo, gastos com os
-															benefícios, créditos ou débitos.
-														</li>
-														<li>
-															Permite ao colaborador enviar os recibos para comprovar que o
-															benefício está sendo utilizado na categoria correta.
-														</li>
-														<li>
-															Permite ao colaborador visualizar os recibos enviados para
-															aprovação.
-														</li>
-														<li>
-															Permite ao colaborador solicitar um adiantamento do benefício
-															caso seja necessário.
-														</li>
-														<li>
-															No painel de gestão (sistema web), o dono da empresa pode aprovar
-															ou reprovar um recibo, autorizando ou não o reembolso do
-															colaborador.
-														</li>
-														<li>
-															No painel de gestão (sistema web), o dono da empresa pode alterar
-															os planos da empresa ou do colaborador.
-														</li>
-													</ul>
-												</li>
+												<li>Personal Project</li>
 												<li>
 													Tecnologias utilizadas:
 													<div>
@@ -421,12 +293,7 @@
 								<!--//project-section-->
 
 								<section class="portfolio-section py-3">
-									<h3
-										class="text-uppercase resume-section-heading mb-4"
-										data-translate="portfolio"
-									>
-										Portfólio
-									</h3>
+									<h3 class="text-uppercase resume-section-heading mb-4">Portfolio</h3>
 									<div class="row">
 										<div class="col-12 col-md-6 col-lg-4 mb-4">
 											<div class="portfolio-item">
@@ -499,18 +366,21 @@
 							<!--//resume-main-->
 							<aside class="resume-aside col-12 col-lg-4 col-xl-3 px-lg-4 pb-lg-4">
 								<section class="skills-section py-3">
-									<h3
-										class="text-uppercase resume-section-heading mb-4"
-										data-translate="skills"
-									>
-										Habilidades
-									</h3>
+									<h3 class="text-uppercase resume-section-heading mb-4">Hard Skills</h3>
 									<div class="item">
-										<h4 class="item-title" data-translate="technologies">Tecnologias</h4>
+										<h4 class="item-title">Techs</h4>
 										<ul class="list-unstyled resume-skills-list">
-											<li class="mb-2">JavaScript/React</li>
+											<li class="mb-2">React.js</li>
+											<li class="mb-2">Next.js</li>
+											<li class="mb-2">Nest.js</li>
 											<li class="mb-2">Node.js</li>
-											<li class="mb-2">PostgreSQL/MySQL</li>
+											<li class="mb-2">MySQL</li>
+											<li class="mb-2">PHP</li>
+											<li class="mb-2">Laravel</li>
+											<li class="mb-2">C#</li>
+											<li class="mb-2">VB6</li>
+											<li class="mb-2">ASP.NET</li>
+											<li class="mb-2">SQL Server</li>
 											<li class="mb-2">Design de orientação a objetos</li>
 											<li class="mb-2">
 												Projetar e implementar estruturas de banco de dados
@@ -519,28 +389,25 @@
 									</div>
 									<!--//item-->
 									<div class="item">
-										<h4 class="item-title" data-translate="professional">Profissional</h4>
+										<h4 class="item-title">Soft Skills</h4>
 										<ul class="list-unstyled resume-skills-list">
-											<li class="mb-2">Comunicação Efetiva</li>
-											<li class="mb-2">Trabalho em equipe</li>
-											<li class="mb-2">Bom aproveitamento de tempo</li>
-											<li class="mb-2">Esforço para aprender novas Tecnologias</li>
+											<li class="mb-2">Effective Comunication</li>
+											<li class="mb-2">Team work</li>
+											<li class="mb-2">Good time management</li>
+											<li class="mb-2">>Problem solving</li>
+											<li class="mb-2">Analytical thinking</li>
+											<li class="mb-2">Attention to detail</li>
 										</ul>
 									</div>
 									<!--//item-->
 								</section>
 								<!--//skills-section-->
 								<section class="education-section py-3">
-									<h3
-										class="text-uppercase resume-section-heading mb-4"
-										data-translate="education"
-									>
-										Acadêmico
-									</h3>
+									<h3 class="text-uppercase resume-section-heading mb-4">Education</h3>
 									<ul class="list-unstyled resume-education-list">
 										<li>
 											<div class="resume-degree font-weight-bold">
-												Bacharelado em Engenharia da Computação
+												Bachelor's Degree in Computer Engineering
 											</div>
 											<div class="resume-degree-org text-muted">
 												Universidade Federal de Goiás
@@ -549,48 +416,37 @@
 										</li>
 										<li class="mb-3">
 											<div class="resume-degree font-weight-bold">
-												Bacharelado em Ciencias da Computação
+												Bachelor's Degree in em Computer Science
 											</div>
 											<div class="resume-degree-org text-muted">
 												Universidade Federal de Goiás
 											</div>
 											<div class="resume-degree-time text-muted">2014-2016</div>
-											<div class="resume-degree-time text-muted">Incompleto</div>
+											<div class="resume-degree-time text-muted">Incomplete</div>
 										</li>
 									</ul>
 								</section>
 								<!--//education-section-->
 								<section class="skills-section py-3">
-									<h3
-										class="text-uppercase resume-section-heading mb-4"
-										data-translate="languages"
-									>
-										Idiomas
-									</h3>
+									<h3 class="text-uppercase resume-section-heading mb-4">Languages</h3>
 									<ul class="list-unstyled resume-lang-list">
 										<li class="mb-2">
-											Português
-											<span class="text-muted" data-translate="portuguese">(Nativo)</span>
+											Português <span class="text-muted">(Native)</span>
 										</li>
-										<li>
-											Inglês
-											<span class="text-muted" data-translate="english">(Avançado)</span>
-										</li>
+										<li>English <span class="text-muted">(Advanced)</span></li>
 									</ul>
 								</section>
 								<!--//certificates-section-->
 								<section class="skills-section py-3">
-									<h3
-										class="text-uppercase resume-section-heading mb-4"
-										data-translate="hobbies"
-									>
-										Hobbies
-									</h3>
+									<h3 class="text-uppercase resume-section-heading mb-4">Hobbies</h3>
 									<ul class="list-unstyled resume-interests-list mb-0">
-										<li class="mb-2" data-translate="games">Games</li>
-										<li class="mb-2" data-translate="teamSports">Esportes em Grupo</li>
-										<li class="mb-2" data-translate="travel">Viajar</li>
-										<li data-translate="hangOut">Sair com os amigos</li>
+										<li class="mb-2">Games</li>
+										<li class="mb-2">Traveling</li>
+										<li>Reading <span class="text-muted">(Books and Mangás)</span></li>
+										<li class="mb-2">Going out with friends</li>
+										<li class="mb-2">Movies</li>
+										<li class="mb-2">Series</li>
+										<li class="mb-2">Music</li>
 									</ul>
 								</section>
 								<!--//certificates-section-->
@@ -606,31 +462,20 @@
 							class="resume-social-list list-inline mx-auto mb-0 d-inline-block text-muted"
 						>
 							<!-- <li class="list-inline-item mb-lg-0 mr-3">
-								<a class="resume-link" href="#"><i class="fab fa-github-square fa-2x mr-2"
-										data-fa-transform="down-4"></i><span
-										class="d-none d-lg-inline-block text-muted">github.com/username</span></a>
-							</li>
-							<li class="list-inline-item mb-lg-0 mr-3">
-								<a class="resume-link" href="#"><i class="fab fa-linkedin fa-2x mr-2" data-fa-transform="down-4"></i><span
-										class="d-none d-lg-inline-block text-muted">linkedin.com/in/username</span></a>
-							</li> -->
+							<a class="resume-link" href="#"><i class="fab fa-github-square fa-2x mr-2"
+									data-fa-transform="down-4"></i><span
+									class="d-none d-lg-inline-block text-muted">github.com/username</span></a>
+						</li>
+						<li class="list-inline-item mb-lg-0 mr-3">
+							<a class="resume-link" href="#"><i class="fab fa-linkedin fa-2x mr-2" data-fa-transform="down-4"></i><span
+									class="d-none d-lg-inline-block text-muted">linkedin.com/in/username</span></a>
+						</li> -->
 						</ul>
 					</div>
 					<!--//resume-footer-->
 				</article>
 			</div>
 			<!--//container-->
-
-			<footer class="footer text-center py-4">
-				<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-				<small class="copyright text-muted"
-					>Designed with <i class="fas fa-heart"></i> by
-					<a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank"
-						>Xiaoying Riley</a
-					>
-					for developers</small
-				>
-			</footer>
 		</div>
 		<!--//main-wrapper-->
 	</body>
